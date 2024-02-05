@@ -25,7 +25,7 @@ export default function CertificatsPage() {
             certificat={elem.certificat}
             certificatHeading={elem.certificatHeading}
             description={elem.description}
-            certificatLink={elem.certificatLink}
+            certificatLink={elem.certificatUrl}
           />
         ))}
       </div>
