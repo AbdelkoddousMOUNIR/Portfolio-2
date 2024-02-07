@@ -4,12 +4,28 @@ import Work from "../sectionsComponents/Footer/Work";
 import Setings from "../sectionsComponents/Footer/Setings";
 import Subscription from "../sectionsComponents/Footer/Subscription";
 import { SocialIcon } from "react-social-icons";
+import { appContext } from '../context/AppContext';
+import { useContext, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Footer() {
+  let { modifySelectedItem } = useContext(appContext)
+  const { ref , inView} = useInView({
+    /* Optional options */
+    threshold: 0.7,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      modifySelectedItem("ContactUs")
+    }
+  })
+
   return (
-    <div
+    <footer
       className="h-auto bg-color1 px-[120px] py-[30px] flex flex-col items-center sm:px-[30px] st:px-[30px]"
       id="ContactUs"
+      ref={ref}
     >
       <div className="w-full flex justify-between sm:flex-col-reverse sm:gap-[30px]">
         <div className="flex justify-between w-[55%] sm:w-full">
@@ -41,6 +57,6 @@ export default function Footer() {
           />
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

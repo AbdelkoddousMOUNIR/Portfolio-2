@@ -1,13 +1,29 @@
 import React from 'react'
 import ProjectCard from '../sectionsComponents/Projects/ProjectCard'
 import { projects } from '../sectionsComponents/Projects/projects'
+import { appContext } from '../context/AppContext';
+import { useContext, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Projects() {
   let lastProjects = projects.slice(-3)
+  let { modifySelectedItem } = useContext(appContext)
+  const { ref , inView} = useInView({
+    /* Optional options */
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      modifySelectedItem("Projects")
+    }
+  })
+
   return (
-    <div
+    <section
       className="w-full px-[150px] my-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh] flex flex-col gap-[20px] sm:overflow-hidden"
       id="Projects"
+      ref={ref}
     >
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-[10px]">
@@ -26,6 +42,6 @@ export default function Projects() {
       <div className='flex items-center justify-around flex-wrap gap-[30px]'>
         {lastProjects.map((elem , index) => (<ProjectCard key={index} imgs={elem.projectImgs} projectName={elem.projectName} projectLik={elem.projectLink} color={elem.color}/>))}
       </div>
-    </div>
+    </section>
   )
 }

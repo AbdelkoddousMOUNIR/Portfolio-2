@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { mySkills } from "../sectionsComponents/Skills/mySkills";
 import DisplayArray from "../sectionsComponents/Skills/DisplayArray";
+import { appContext } from '../context/AppContext';
+import { useContext } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Skills() {
   let [selectedItem, setSelectedItem] = useState("Front End");
   let active = "border-b-[3px] rounded-[2px]";
 
+  let { modifySelectedItem } = useContext(appContext)
+  const { ref , inView } = useInView({
+    /* Optional options */
+    threshold: 1,
+  });
+  useEffect(() => {
+    if (inView) {
+      modifySelectedItem("Skills")
+    }
+  })
+
   return (
-    <div
+    <section
       className="w-full px-[150px] my-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh]"
       id="Skills"
+      ref={ref}
     >
       <div className="flex items-center">
         <div className="flex items-center gap-[10px]">
@@ -20,25 +35,19 @@ export default function Skills() {
         </div>
         <ul className="flex gap-[30px] ml-[35%] text-xl sm:text-sm sm:ml-[20%]  sm:gap-[20px]">
           <li
-            className={`${
-              selectedItem === "Front End" ? active : ""
-            } cursor-pointer text-color2 font-medium border-color2`}
+            className={`${selectedItem === "Front End" ? active : ""} cursor-pointer text-color2 font-medium border-color2`}
             onClick={() => setSelectedItem("Front End")}
           >
             Front End
           </li>
           <li
-            className={`${
-              selectedItem === "Back End" ? active : ""
-            } cursor-pointer text-color2 font-medium border-color2`}
+            className={`${selectedItem === "Back End" ? active : ""} cursor-pointer text-color2 font-medium border-color2`}
             onClick={() => setSelectedItem("Back End")}
           >
             Back End
           </li>
           <li
-            className={`${
-              selectedItem === "UI/UX" ? active : ""
-            } cursor-pointer text-color2 font-mediumter border-color2 `}
+            className={`${selectedItem === "UI/UX" ? active : ""} cursor-pointer text-color2 font-medium border-color2`}
             onClick={() => setSelectedItem("UI/UX")}
           >
             UI/UX
@@ -48,6 +57,6 @@ export default function Skills() {
       <div className="mt-[30px] flex flex-col gap-[40px]">
         <DisplayArray array={mySkills} selectedItem={selectedItem} />
       </div>
-    </div>
+    </section>
   );
 }

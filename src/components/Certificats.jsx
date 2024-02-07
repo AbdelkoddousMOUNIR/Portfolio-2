@@ -5,6 +5,9 @@ import { certificats } from "../sectionsComponents/Certificats/certificats";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { appContext } from '../context/AppContext';
+import { useContext, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Certificats() {
   const settings = {
@@ -14,11 +17,23 @@ export default function Certificats() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  let { modifySelectedItem } = useContext(appContext)
+  const { ref , inView} = useInView({
+    /* Optional options */
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      modifySelectedItem("Certificats")
+    }
+  })
 
   return (
-    <div
+    <section
       className="w-full px-[150px] my-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh] flex flex-col gap-[40px] sm:overflow-hidden"
       id="Certificats"
+      ref={ref}
     >
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-[10px]">
@@ -45,6 +60,6 @@ export default function Certificats() {
           />
         ))}
       </Slider>
-    </div>
+    </section>
   );
 }
