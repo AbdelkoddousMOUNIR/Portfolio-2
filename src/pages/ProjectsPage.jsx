@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-[30px]">
+      <div className="flex flex-wrap justify-center items-center gap-[30px] pb-5">
         {projects.map((elem, index) => (
           <ProjectCard
             key={index}

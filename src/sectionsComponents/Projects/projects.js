@@ -4,6 +4,8 @@ import project2Img1 from '../../imgs/project2-img1.jpg'
 import project2Img2 from '../../imgs/project2-img2.jpg'
 import project3Img1 from '../../imgs/project3-img1.jpg'
 import project3Img2 from '../../imgs/project3-img2.jpg'
+import project4Img1 from '../../imgs/project4-img1.jpg'
+import project4Img2 from '../../imgs/project4-img2.jpg'
 
 export const projects = [
     {
@@ -23,5 +25,11 @@ export const projects = [
         projectImgs : [project2Img2 , project2Img1],
         projectLink: 'https://doitproject.netlify.app',
         color : "#176b87"
+    },
+    {
+        projectName: 'Nike Store',
+        projectImgs : [project4Img2 , project4Img1],
+        projectLink: 'https://nikestoreproject.netlify.app',
+        color : "#6a7285"
     },
 ]
