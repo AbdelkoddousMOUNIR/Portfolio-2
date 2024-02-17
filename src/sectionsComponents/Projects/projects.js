@@ -28,7 +28,7 @@ export const projects = [
     },
     {
         projectName: 'Nike Store',
-        projectImgs : [project4Img2 , project4Img1],
+        projectImgs : [project4Img1 , project4Img2],
         projectLink: 'https://nikestoreproject.netlify.app',
         color : "#6a7285"
     },
