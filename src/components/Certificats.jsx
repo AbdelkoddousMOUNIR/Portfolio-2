@@ -1,37 +1,36 @@
-import React from "react";
-import "../index.css";
+import React, { useContext, useEffect } from "react"; // Importing useContext and useEffect from 'react'
+import "../index.css"
 import Certifica from "../sectionsComponents/Certificats/Certifica";
 import { certificats } from "../sectionsComponents/Certificats/certificats";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { appContext } from '../context/AppContext';
-import { useContext, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export default function Certificats() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-  let { modifySelectedItem } = useContext(appContext)
-  const { ref , inView} = useInView({
-    /* Optional options */
+  const { modifySelectedItem } = useContext(appContext); // Adding missing curly braces around modifySelectedItem
+  const { ref, inView } = useInView({
     threshold: 1,
   });
 
   useEffect(() => {
     if (inView) {
-      modifySelectedItem("Certificats")
+      modifySelectedItem("Certificats");
     }
-  })
+  }, [inView, modifySelectedItem]); // Adding missing dependencies to useEffect
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+  };
 
   return (
     <section
-      className="w-full px-[150px] my-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh] flex flex-col gap-[40px] sm:overflow-hidden"
+      className="w-full px-[150px] my-[40px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh] flex flex-col gap-[40px] sm:overflow-hidden"
       id="Certificats"
       ref={ref}
     >

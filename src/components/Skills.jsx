@@ -22,7 +22,7 @@ export default function Skills() {
 
   return (
     <section
-      className="w-full px-[150px] my-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh]"
+      className="w-full px-[150px] mt-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[12vh]"
       id="Skills"
       ref={ref}
     >

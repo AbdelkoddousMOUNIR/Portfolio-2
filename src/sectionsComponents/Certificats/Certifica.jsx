@@ -8,8 +8,8 @@ export default function Certifica({
   certificatLink,
 }) {
   return (
-    <div className="h-auto w-full flex justify-center items-center">
-      <div className="flex w-[650px] bg-[#F7F7F7] shadow-md sm:flex-col st:w-[580px] sm:w-[350px]">
+    <div className="w-full flex justify-center items-center">
+      <div className="w-[70%] flex bg-[#F7F7F7] shadow-md sm:flex-col st:w-[580px] sm:w-[350px]">
         <img
           src={certificat}
           alt=""

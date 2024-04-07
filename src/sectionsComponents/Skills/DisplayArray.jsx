@@ -5,7 +5,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { FaChevronUp } from "react-icons/fa6";
 
 const DisplayArray = ({ array, selectedItem }) => {
-  let countNum = 3 ;
+  let countNum = 10 ;
   const [displayCount, setDisplayCount] = useState(countNum);
   const [selectedItemState, setSelectedItemState] = useState(selectedItem);
 
@@ -30,13 +30,12 @@ const DisplayArray = ({ array, selectedItem }) => {
 
   return (
     <div className="flex flex-col gap-[30px]">
-      <div className="flex flex-col gap-[25px]">
+      <div className="flex items-start justify-center flex-wrap mt-5 px-[50px] gap-[40px] sm:px-5">
         {displayedArray.map((elem, index) => (
           <SkillElem
             key={index}
             name={elem.name}
             imgSrc={elem.imgSrc}
-            pourcentage={elem.pourcentage}
             iconColor={elem.iconColor}
           />
         ))}

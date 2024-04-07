@@ -1,5 +1,6 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
+import resume from '../../pdfs/resume.pdf'
 
 export default function MyInfos() {
   return (
@@ -19,7 +20,7 @@ export default function MyInfos() {
         <p className='w-[70%] mt-[15px] mb-[30px] opacity-70 text-lg st:text-sm sm:w-full'>
           I'm Abdelkoddous MOUNIR, a UI/UX designer and full-stack developer. I'm 18 years old and an English student from Morocco.
         </p>
-        <a href={`#resume`} download={'Abdelkoddous resume'} className='bg-color2 text-white px-[32px] py-[8px] rounded-[4px] text-[1rem] st:text-[0.9rem] sm:text-lg'>Download Resumé</a>
+        <a href={`${resume}`} download={'Abdelkoddous MOUNIR resume'} className='bg-color2 text-white px-[32px] py-[8px] rounded-[4px] text-[1rem] st:text-[0.9rem] sm:text-lg'>Download Resumé</a>
     </div>
   )
 }
