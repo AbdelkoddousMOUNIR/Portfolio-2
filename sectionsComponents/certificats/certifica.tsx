@@ -10,24 +10,26 @@ export default function Certifica({
 } : certificat) {
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="w-[70%] flex bg-[#F7F7F7] shadow-md sm:flex-col st:w-[580px] sm:w-[350px]">
-        <Image
+      <div className="lg:w-[90%] flex bg-[#F7F7F7] dark:bg-color4 flex-col md:flex-row md:w-[580px] w-[350px] py-[30px]">
+        <a href={certificatLink} className="md:w-[50%] w-full">
+          <Image
           src={certificat}
           alt="certificat"
-          className="w-[50%] st:w-[270px] sm:w-full"
+          className="w-full h-[300px]"
         />
-        <div className="w-[50%] p-[20px] relative st:w-[300px] sm:w-full">
-          <h2 className="text-xl text-color1 capitalize font-medium sm:mb-[70px]">
+        </a>
+        <div className="lg:w-[50%] px-[20px] md:w-[300px] w-full hidden md:block">
+          <h2 className="text-xl text-color1 dark:text-white capitalize font-semibold">
             {certificatHeading}
           </h2>
-          <p className="h-[150px] mt-[7px] text-[1rem] opacity-70 mb-[70px] overflow-hidden st:text-sm sm:hidden st:h-[170px]">
+          <p className="mt-[7px] md:text-[0.9rem] opacity-70 mb-[30px]">
             {description}
           </p>
           <a
             href={`${certificatLink}`}
-            className="bg-color2 py-[6px] px-[16px] text-white absolute bottom-[20px] right-[20px] rounded-md cursor-pointer"
+            className="bg-color2 capitalize dark:bg-white py-[10px] px-[50px] text-white dark:text-color4 rounded-md cursor-pointer"
           >
-            see certificat
+            see certificate
           </a>
         </div>
       </div>

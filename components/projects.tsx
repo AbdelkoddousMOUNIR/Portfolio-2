@@ -6,7 +6,7 @@ import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
-  let lastProjects = projects.slice(-3);
+  let lastProjects = projects.slice(-4);
   const appCtx = useContext(appContext);
   if (!appCtx) {
     throw new Error("appContext must be used within an AppContextProvider");
@@ -19,30 +19,29 @@ export default function Projects() {
 
   useEffect(() => {
     if (inView) {
-      modifySelectedItem("Projects");
+      modifySelectedItem("projects");
     }
   });
 
   return (
     <section
-      className="w-full px-[150px] my-[70px] st:px-[80px] sm:px-[5%] scroll-mt-[120px] flex flex-col gap-[20px]"
-      id="Projects"
+      className="w-full lg:px-[150px] my-[70px] md:px-[80px] px-[5%] scroll-mt-[120px] flex flex-col gap-[20px]"
+      id="projects"
       ref={ref}
     >
       <div className="flex items-center gap-[10px]">
-        <div className="w-[20px] h-[50px] bg-color1 rounded-[20px] sm:w-[10px] sm:h-[25px]"></div>
-        <h1 className="text-2xl text-color1 font-semibold sm:text-lg">
+        <div className="md:w-[20px] md:h-[50px] bg-color1 dark:bg-white dark:bg-opacity-80 rounded-[20px] w-[10px] h-[25px]"></div>
+        <h1 className="md:text-2xl text-color1 dark:text-white dark:text-opacity-80 font-semibold text-lg">
           Projects
         </h1>
       </div>
-      <div className="flex items-center justify-around flex-wrap gap-[30px]">
-        {lastProjects.map((elem, index) => (
+      <div className="flex items-center justify-around flex-wrap md:py-5 gap-x-[30px] md:gap-y-[20px]">
+        {lastProjects.map((project, index) => (
           <ProjectCard
             key={index}
-            projectImages={elem.projectImages}
-            projectName={elem.projectName}
-            projectLink={elem.projectLink}
-            color={elem.color}
+            projectImage={project.projectImage}
+            projectName={project.projectName}
+            projectLink={project.projectLink}
           />
         ))}
       </div>

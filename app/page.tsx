@@ -4,6 +4,7 @@ import Skills from "@/components/skills";
 import Certificats from "@/components/certificats";
 import Projects from '@/components/projects'
 import Footer from "@/components/footer";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function HomePage() {
   return (
@@ -11,9 +12,10 @@ export default function HomePage() {
       <NavBar />
       <Home />
       <Skills />
-      <Certificats />
       <Projects />
+      <Certificats />
       <Footer />
+      <BackgroundBeams />
     </div>
   )
 }

@@ -11,22 +11,22 @@ export interface AppContextProviderProps {
 }
 
 export interface skill {
-    name: string,
-    imgSrc: StaticImageData,
-    iconColor: string,
-    category?: string,
+    title: string,
+    skillImage: StaticImageData | string,
+    description: string,
+    technologiesImages: (string | StaticImageData)[];
+    colors: [string , string]
 }
 
 export interface certificat {
     certificat : StaticImageData,
     certificatHeading : string,
-    description : string,
+    description? : string,
     certificatLink: string
 }
 
 export interface project {
-    projectImages : StaticImageData[],
-    color : string,
+    projectImage : StaticImageData | string,
     projectName : string,
     projectLink : string
 }

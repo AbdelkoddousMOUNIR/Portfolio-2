@@ -21,30 +21,21 @@ export default function Footer() {
 
   useEffect(() => {
     if (inView) {
-      modifySelectedItem("ContactUs");
+      modifySelectedItem("contactUs");
     }
   });
 
   return (
     <footer
-      className="h-auto bg-color1 px-[120px] py-[30px] flex flex-col scroll-m-[16vh] items-center sm:px-[30px] st:px-[30px]"
-      id="ContactUs"
+      className="h-auto bg-color1 dark:bg-color3 lg:px-[120px] py-5 flex flex-col scroll-m-[16vh] items-center px-[30px] md:px-[30px]"
+      id="contactUs"
       ref={ref}
     >
-      <div className="w-full flex justify-between sm:flex-col-reverse sm:gap-[30px]">
-        <div className="flex justify-between w-[55%] sm:w-full">
-          <Sections />
-          <Work />
-          <Setings />
-        </div>
-        <Subscription />
-      </div>
-      <hr className="w-[90%] h-[3px] mt-[30px] bg-white rounded-[4px]" />
-      <div className="w-full flex justify-between items-center mt-[30px]">
-        <h3 className="text-white font-medium sm:text-[0.8rem]">
+      <div className="w-full flex justify-between items-center">
+        <h3 className="text-white font-medium text-[0.8rem] md:text-lg">
           © copyrite 2024
         </h3>
-        <div className="flex gap-[15px] sm:gap-[5px]">
+        <div className="flex md:gap-[15px] gap-[5px]">
           <SocialIcon
             url="https://www.linkedin.com/in/abdelkoddous-mounir-50373a294/"
             style={{ width: "40px", height: "40px" }}

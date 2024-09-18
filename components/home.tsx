@@ -14,22 +14,22 @@ export default function Home() {
 
   const { modifySelectedItem } = appCtx;
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: 0.5,
   });
 
   useEffect(() => {
     if (inView) {
-      modifySelectedItem("Home");
+      modifySelectedItem("home");
     }
   }, [inView, modifySelectedItem]);
 
   return (
     <section
-      className="h-auto w-full px-[150px] mt-[70px] st:px-[80px] sm:mt-[50px] sm:px-[10%] scroll-m-[23vh]"
-      id="Home"
+      className="h-auto w-full lg:px-[10%] lg:mt-[70px] md:px-[80px] mt-[50px] px-[10%] scroll-m-[23vh]"
+      id="home"
       ref={ref}
     >
-      <div className="flex sm:flex-col sm:gap-[50px]">
+      <div className="flex flex-col md:flex-row gap-[50px]">
         <MyInfos />
         <ImgContainer />
       </div>

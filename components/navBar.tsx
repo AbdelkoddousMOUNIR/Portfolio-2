@@ -1,7 +1,8 @@
 "use client";
-import { useState, useContext } from "react";
-import { FaBars } from "react-icons/fa6";
+import { useContext } from "react";
 import { appContext } from "../context/appContext";
+import { ModeToggle } from "./modeToggle";
+import MenuItems from "./sheet";
 
 interface AppContextType {
   selectedItem: string;
@@ -12,76 +13,69 @@ export default function NavBar() {
   const { selectedItem, modifySelectedItem } = useContext(
     appContext
   ) as AppContextType;
-  const [showMenu, setShowMenu] = useState<boolean>(false);
-  const isOpen = showMenu ? "sm:absolute" : "sm:hidden";
-  const active = "border-b-[3px] rounded-[2px]";
+  const active = "border-b-[3px] rounded-[2px] dark:border-white";
 
   return (
-    <nav className="py-3 px-[50px] h-[85px] flex top-0 justify-between sticky w-full bg-color1 items-center z-50 sm:justify-between sm:px-[20px] ">
-      <h1 className="text-xl text-white sm:text-[1rem] font-medium">
+    <nav className="py-3 md:px-[50px] dark:text-opacity-80 h-[85px] flex top-0 justify-between sticky w-full bg-color1 items-center z-50 px-[20px] dark:bg-[hsl(var(--background))] dark:bg-opacity-80">
+      <h1 className="md:text-xl text-white text-[1rem] font-medium">
         Abdelkoddous MOUNIR
       </h1>
       <ul
-        className={`flex gap-7 capitalize text-[1rem] items-center justify-center rounded-b-2xl text-white sm:bg-color1 sm:h-[270px] sm:w-[200px] sm:flex-col sm:top-14 sm:right-0 ${isOpen}`}
+        className={`lg:flex hidden gap-7 capitalize text-[1rem] justify-center rounded-b-2xl text-white bg-transparent flex-row px-5 items-center`}
       >
         <li
-          className={`${selectedItem === "Home" ? active : ""} cursor-pointer`}
+          className={`${selectedItem === "home" ? active : ""} cursor-pointer`}
           onClick={() => {
-            modifySelectedItem("Home");
-            setShowMenu(false);
+            modifySelectedItem("home");
           }}
         >
-          <a href="#Home">Home</a>
+          <a href="#home">Home</a>
         </li>
         <li
           className={`${
-            selectedItem === "Skills" ? active : ""
+            selectedItem === "skills" ? active : ""
           } cursor-pointer`}
           onClick={() => {
-            modifySelectedItem("Skills");
-            setShowMenu(false);
+            modifySelectedItem("skills");
           }}
         >
-          <a href="#Skills">Skills</a>
+          <a href="#skills">Skills</a>
         </li>
         <li
           className={`${
-            selectedItem === "Certificats" ? active : ""
+            selectedItem === "projects" ? active : ""
           } cursor-pointer`}
           onClick={() => {
-            modifySelectedItem("Certificats");
-            setShowMenu(false);
+            modifySelectedItem("projects");
           }}
         >
-          <a href="#Certificats">Certificats</a>
+          <a href="#projects">Projects</a>
         </li>
         <li
           className={`${
-            selectedItem === "Projects" ? active : ""
+            selectedItem === "certificats" ? active : ""
           } cursor-pointer`}
           onClick={() => {
-            modifySelectedItem("Projects");
-            setShowMenu(false);
+            modifySelectedItem("certificats");
           }}
         >
-          <a href="#Projects">Projects</a>
+          <a href="#certificats">Certificats</a>
         </li>
         <li
           className={`${
-            selectedItem === "ContactUs" ? active : ""
+            selectedItem === "contactUs" ? active : ""
           } cursor-pointer`}
           onClick={() => {
-            modifySelectedItem("ContactUs");
-            setShowMenu(false);
+            modifySelectedItem("contactUs");
           }}
         >
-          <a href="#ContactUs">contact us</a>
+          <a href="#contactUs">contact me</a>
         </li>
       </ul>
-      <FaBars
-        className="h-8 w-8 text-white rounded-lg cursor-pointer hidden sm:block"
-        onClick={() => setShowMenu(!showMenu)}
-      />
-    </nav>
+      <div className="flex gap-5 items-center">
+        <ModeToggle />
+        <MenuItems modifySelectedItem={modifySelectedItem} />
+      </div>
+    </nav> 
   );
 }
