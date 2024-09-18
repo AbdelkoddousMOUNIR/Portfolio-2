@@ -1,4 +1,4 @@
-import abdoshop from '@/imgs/abdoShop.jpg';
+import abdoshop from '@/imgs/shop.jpg';
 import restaurant from '@/imgs/restaurant.jpg';
 import doit from '@/imgs/doit.jpg';
 import nikestore from '@/imgs/nikestore.jpg';
