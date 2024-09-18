@@ -21,37 +21,37 @@ export default function MenuItems({ modifySelectedItem }: menuItemsTypes) {
       </SheetTrigger>
       <SheetContent className="flex flex-col gap-5 justify-center items-center">
         <a
-          href="#Home"
+          href="#home"
           className="cursor-pointer"
-          onClick={() => handleAnchorClick("Home")}
+          onClick={() => handleAnchorClick("home")}
         >
           Home
         </a>
         <a
-          href="#Skills"
+          href="#skills"
           className="cursor-pointer"
-          onClick={() => handleAnchorClick("Skills")}
+          onClick={() => handleAnchorClick("skills")}
         >
           Skills
         </a>
         <a
-          href="#Projects"
+          href="#projects"
           className="cursor-pointer"
-          onClick={() => handleAnchorClick("Projects")}
+          onClick={() => handleAnchorClick("projects")}
         >
           Projects
         </a>
         <a
-          href="#Certificats"
+          href="#certificats"
           className="cursor-pointer"
-          onClick={() => handleAnchorClick("Certificats")}
+          onClick={() => handleAnchorClick("certificats")}
         >
           Certificats
         </a>
         <a
-          href="#ContactUs"
+          href="#contactUs"
           className="cursor-pointer"
-          onClick={() => handleAnchorClick("ContactUs")}
+          onClick={() => handleAnchorClick("contactUs")}
         >
           Contact Me
         </a>
