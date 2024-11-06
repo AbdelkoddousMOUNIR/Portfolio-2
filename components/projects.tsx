@@ -6,7 +6,8 @@ import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
-  let lastProjects = projects.slice(4);
+  // Get the first 4 projects
+  let firstProjects = projects.slice(0, 4);
   const appCtx = useContext(appContext);
   if (!appCtx) {
     throw new Error("appContext must be used within an AppContextProvider");
@@ -36,7 +37,7 @@ export default function Projects() {
         </h1>
       </div>
       <div className="flex items-center justify-around flex-wrap md:py-5 gap-x-[30px] md:gap-y-[20px]">
-        {lastProjects.map((project, index) => (
+        {firstProjects.map((project, index) => (
           <ProjectCard
             key={index}
             projectImage={project.projectImage}
