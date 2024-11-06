@@ -6,7 +6,7 @@ import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
-  let lastProjects = projects.slice(-4);
+  let lastProjects = projects.slice(4);
   const appCtx = useContext(appContext);
   if (!appCtx) {
     throw new Error("appContext must be used within an AppContextProvider");

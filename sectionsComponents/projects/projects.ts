@@ -8,24 +8,9 @@ import { project } from "@/types/types";
 
 export const projects: project[] = [
   {
-    projectName: "Nike Store",
-    projectImage: nikestore,
-    projectLink: "https://nikestoreproject.netlify.app",
-  },
-  {
-    projectName: "Restaurant",
-    projectImage: restaurant,
-    projectLink: "https://italianfoodrestaurant.netlify.app",
-  },
-  {
-    projectName: "DoIt",
-    projectImage: doit,
-    projectLink: "https://doitproject.netlify.app",
-  },
-  {
-    projectName: "Abdo Shop",
-    projectImage: abdoshop,
-    projectLink: "https://abdoshop.netlify.app",
+    projectName: "Bookilik",
+    projectImage: bookilik,
+    projectLink: "https://bookilik.vercel.app/",
   },
   {
     projectName: "Saybli Agency",
@@ -33,8 +18,23 @@ export const projects: project[] = [
     projectLink: "https://saybliagency.vercel.app/",
   },
   {
-    projectName: "Bookilik",
-    projectImage: bookilik,
-    projectLink: "https://bookilik.vercel.app/",
+    projectName: "Abdo Shop",
+    projectImage: abdoshop,
+    projectLink: "https://abdoshop.netlify.app",
+  },
+  {
+    projectName: "DoIt",
+    projectImage: doit,
+    projectLink: "https://doitproject.netlify.app",
+  },
+  {
+    projectName: "Restaurant",
+    projectImage: restaurant,
+    projectLink: "https://italianfoodrestaurant.netlify.app",
+  },
+  {
+    projectName: "Nike Store",
+    projectImage: nikestore,
+    projectLink: "https://nikestoreproject.netlify.app",
   },
 ];
