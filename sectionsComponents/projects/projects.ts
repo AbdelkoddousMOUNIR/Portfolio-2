@@ -3,19 +3,19 @@ import restaurant from "@/imgs/restaurant.jpg";
 import doit from "@/imgs/doit.jpg";
 import nikestore from "@/imgs/nikestore.jpg";
 import bookilik from "@/imgs/bookilik.jpg";
-import saybliAgency from "@/imgs/agency.jpg";
+import digild from "@/imgs/agency.jpg";
 import { project } from "@/types/types";
 
 export const projects: project[] = [
   {
     projectName: "Bookilik",
     projectImage: bookilik,
-    projectLink: "https://bookilik.vercel.app/",
+    projectLink: "https://bookilik.com",
   },
   {
-    projectName: "Saybli Agency",
-    projectImage: saybliAgency,
-    projectLink: "https://saybliagency.vercel.app/",
+    projectName: "Digild Agency",
+    projectImage: digild,
+    projectLink: "https://digild.com",
   },
   {
     projectName: "Abdo Shop",
