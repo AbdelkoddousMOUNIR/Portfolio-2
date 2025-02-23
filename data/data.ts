@@ -46,7 +46,7 @@ export const projects = [
     {
       id: 1,
       title: "Founder Of Bookilik",
-      desc: "Founder of Bookilik is the visionary behind bookilik.com, responsible for developing and launching the platform.",
+      desc: "The visionary behind bookilik.com, responsible for developing and launching the platform.",
       className: "md:col-span-2",
       thumbnail: "/images/exp1.svg",
     },
@@ -60,7 +60,7 @@ export const projects = [
     {
       id: 3,
       title: "Freelance Web Developer",
-      desc: "Led the dev of web apps for a clients, from initial concept to deployment.",
+      desc: "Led the dev of web apps for clients, from initial concept to deployment.",
       className: "md:col-span-2",
       thumbnail: "/images/exp3.svg",
     },
