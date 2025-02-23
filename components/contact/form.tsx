@@ -58,9 +58,9 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full md:w-[600px] flex flex-col gap-10"
+      className="w-full md:w-[600px] flex flex-col gap-7 md:gap-10"
     >
-      <div className="flex gap-5 items-center flex-col md:flex-row">
+      <div className="flex gap-7 md:gap-10 items-center flex-col md:flex-row">
         <input
           type="text"
           name="firstName"
