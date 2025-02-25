@@ -5,7 +5,7 @@ import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import MyApproach from "@/components/myApproach/myApproach";
 import Projects from "@/components/projects/projects";
-//import Skills from "@/components/skills/skills";
+import Skills from "@/components/skills/skills";
 //import Testimonials from "@/components/testimonials/testimonials";
 import { FloatingNav } from "@/components/ui/floatingNavbar";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -23,6 +23,7 @@ export default function Home() {
         <Welcome />
         <Hero />
         <Projects />
+        <Skills />
         <MyApproach />
         <Experience />
         <Contact />

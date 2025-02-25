@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.2.0",
     "@react-three/drei": "^10.0.0",
     "@react-three/fiber": "^9.0.2",
+    "@tabler/icons-react": "^3.30.0",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
