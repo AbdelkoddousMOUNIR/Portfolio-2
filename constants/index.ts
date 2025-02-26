@@ -92,12 +92,6 @@ export const Frontend = [
       width: 30,
       height: 30,
     },
-    {
-      skill_name: "Lemonsqueezy",
-      Image: "/images/lemonSqueezy.jfif",
-      width: 30,
-      height: 30,
-    },
   ];
   
   

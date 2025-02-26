@@ -71,7 +71,7 @@ const Projects = () => {
                   <p className="flex lg:text-xl md:text-xs text-sm text-[#3674B5]">
                     Check Live Site
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <FaLocationArrow className="ms-3" color="#3674B5" />
                 </div>
               </div>
             </PinContainer>
