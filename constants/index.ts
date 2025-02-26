@@ -54,8 +54,14 @@ export const Frontend = [
       height: 50,
     },
     {
-      skill_name: "Next js 13",
+      skill_name: "Next js 15",
       Image: "/images/next.png",
+      width: 50,
+      height: 50,
+    },
+    {
+      skill_name: "Shadcn",
+      Image: "/images/shadcn.png",
       width: 50,
       height: 50,
     },
@@ -83,6 +89,12 @@ export const Frontend = [
     {
       skill_name: "Stripe",
       Image: "/images/stripe.webp",
+      width: 30,
+      height: 30,
+    },
+    {
+      skill_name: "Lemonsqueezy",
+      Image: "/images/lemonSqueezy.jfif",
       width: 30,
       height: 30,
     },
