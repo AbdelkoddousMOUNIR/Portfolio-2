@@ -6,11 +6,17 @@ type SpotlightProps = {
   fill?: string;
 };
 
+const isValidHex = (color?: string) => {
+  return /^#([0-9A-F]{3}){1,2}$/i.test(color || "");
+};
+
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
+  const validatedFill = isValidHex(fill) ? fill : "#ffffff"; // Default to white
+
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none fixed z-40  h-[169%] w-[138%] lg:w-[84%] opacity-0",
+        "animate-spotlight pointer-events-none fixed z-50 h-[169%] w-[138%] lg:w-[84%] opacity-0",
         className
       )}
       xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +30,8 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           rx="1924.71"
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-          fill={fill || "white"}
-          fillOpacity="0.21"
+          fill={validatedFill}
+          fillOpacity={0.21}
         ></ellipse>
       </g>
       <defs>

@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black overflow-x-hidden">
       <StarsCanvas />
-      <Spotlight fill="blue" />
+      <Spotlight fill="#3674B5" />
       <div className="fixed z-30 w-full h-screen bg-black bg-opacity-70"></div>
       <div className="relative z-50">
         <FloatingNav navItems={navItems} />
