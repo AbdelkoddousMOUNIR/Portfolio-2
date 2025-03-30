@@ -22,7 +22,7 @@ export const projects = [
       des: "Bookilik is a dynamic rental car marketplace connecting customers with trusted car rental agencies, offering seamless booking, competitive pricing, and diverse vehicle options.",
       img: "/images/bookilik.jpg",
       iconLists: ["/images/next.svg", "/images/tail.svg", "/images/ts.svg", "/images/express.png", "/images/redux.png"],
-      link: "https://bookilk.com/",
+      link: "https://bookilik.com/",
     },
     {
       id: 4,
