@@ -152,3 +152,29 @@ export const projects = [
     },
   ];
   
+
+  export const slugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "nginx",
+  "vercel",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "figma",
+  "redux",
+  "stripe",
+  "mongodb",
+  "reactQuery",
+  "next",
+  "shadcn",
+  "mui"
+];
