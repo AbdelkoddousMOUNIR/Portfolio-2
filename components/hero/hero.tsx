@@ -15,14 +15,10 @@ const getImageUrls = async (slugs: string[]) => {
   const images = await Promise.all(
     slugs.map(async (slug) => {
       const url = `https://cdn.simpleicons.org/${slug}`;
-      try {
-        const res = await fetch(url);
-        if (res.ok) {
-          return url;
-        } else {
-          return `/images/${slug}.png`;
-        }
-      } catch (error) {
+      const res = await fetch(url);
+      if (res.ok) {
+        return url;
+      } else {
         return `/images/${slug}.png`;
       }
     })
