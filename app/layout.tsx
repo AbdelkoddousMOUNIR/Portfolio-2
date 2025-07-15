@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://example.com/banner.png",
+        url: "https://abdelkoddousmounir.digild.com/banner.png",
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
